@@ -1,0 +1,20 @@
+spring:
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+  jpa:
+    hibernate:
+      ddl-auto: update
+  h2:
+    console.enabled: true
+
+logging:
+  level:
+    ROOT: ERROR
+    org.springframework: ERROR
+    org.hibernate: DEBUG
+    com.ofs: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file: logs/app.log
